@@ -8,7 +8,7 @@ void free_mem(char **tokens, int *num_tokens)
 {
 	int i = 0;
 
-	while (i < *num_tokens)
+	while (i <= *num_tokens)
 	{
 		free(tokens[i]);
 		i++;

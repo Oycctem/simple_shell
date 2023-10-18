@@ -29,12 +29,6 @@ char **strbrkdown(char *cmd, int *num_tokens)
 	while (token)
 	{
 		tokens[i] = strdup(token);
-		if (!tokens[i])
-		{
-			free(temporary);
-			free(tokens);
-			return (NULL);
-		}
 		token = strtok(NULL, DELIM);
 		i++;
 	}
