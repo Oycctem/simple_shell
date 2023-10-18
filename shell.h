@@ -14,7 +14,7 @@
 #define DELIM "\n \t"
 extern char **environ;
 
-char **strbrkdown(char *cmd, int*num_tokens);
+char **strbrkdown(char *cmd, int *num_tokens);
 int handle_builtin_commands(char *cmd);
 void free_mem(char **tokens, int *num_tokens);
 int _strcmp(char *s1, char *s2);
