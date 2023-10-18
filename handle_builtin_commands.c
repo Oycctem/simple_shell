@@ -12,7 +12,7 @@ int handle_builtin_commands(char *cmd)
 	{
 		return (0);
 	}
-	else if (_strcmp(cmd, "end") == 0)
+	else if (_strcmp(cmd, "env") == 0)
 	{
 		while (environ[i])
 		{

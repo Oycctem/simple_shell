@@ -25,7 +25,7 @@ int executer(char **cmd, char *name, int *num_tokens, char *buffer)
 	if (pid == -1)
 	{
 		perror("fork");
-		return (1);
+		return (0);
 	}
 	else if (pid == 0)
 	{

@@ -6,7 +6,7 @@
  */
 char *matching_path(const char *cmd)
 {
-	const char *paths = getpath();
+	const char *paths;
 	char *token, *temporary, *whole_path;
 	struct stat st;
 
@@ -14,9 +14,11 @@ char *matching_path(const char *cmd)
 	{
 		return (_strdup(cmd));
 	}
+	paths = getpath();
 	temporary = _strdup(paths);
 	token = strtok(temporary, ":");
-
+	if (paths)
+	{
 	while (token)
 	{
 		whole_path = make_whole_path(token, cmd);
@@ -27,6 +29,7 @@ char *matching_path(const char *cmd)
 		}
 		free(whole_path);
 		token = strtok(NULL, ":");
+	}
 	}
 	free(temporary);
 	return (NULL);

@@ -6,14 +6,17 @@
  */
 int command_path_check(const char *cmd)
 {
+	int i = 0;
 	struct stat st;
 
-	if (_strchr(cmd, '/') != NULL)
+	while (cmd[i])
 	{
-		if (stat(cmd, &st) == 0)
+		if (cmd[i] == '/')
 		{
+			if (stat(cmd, &st) == 0)
 			return (1);
 		}
+		i++;
 	}
 	return (0);
 }
