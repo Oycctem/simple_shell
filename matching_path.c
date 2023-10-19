@@ -1,7 +1,7 @@
 #include "shell.h"
 /**
- * matching_path - find the full path for a command in the path env
- * @cmd: the command to locate
+ * matching_path - find the full path for a command in the path env.
+ * @cmd: the command to locate.
  * Return: returns the full path to the command else NULL
  */
 char *matching_path(const char *cmd)
