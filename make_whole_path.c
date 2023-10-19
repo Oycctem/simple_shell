@@ -1,8 +1,8 @@
 #include "shell.h"
 /**
- * make_whole_path - combines a dir path and a cmd path
- * @path: the dir path
- * @cmd: the command
+ * make_whole_path - combines a dir path and a cmd path.
+ * @path: the dir path.
+ * @cmd: the command.
  * Return: returns a string containing the whole path
  */
 char *make_whole_path(const char *path, const char *cmd)
