@@ -1,7 +1,7 @@
 #include "shell.h"
 /**
- * strbrkdown - tokenizes a command string and returns an array of tokens
- * @cmd: the command string to be tokenized
+ * strbrkdown - tokenizes a command string and returns an array of tokens.
+ * @cmd: the command string to be tokenized.
  * @num_tokens: a pounter to the int to store the number of tokens
  * Return: An array of tokens else NULL
  */
