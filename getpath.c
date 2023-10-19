@@ -1,7 +1,7 @@
 #include "shell.h"
 /**
- * getpath - extract the value of the path env variable
- * Return: retunrs the paht value else NULL
+ * getpath - extract the value of the path env variable.
+ * Return: retunrs the paht value else NULL.
  */
 char *getpath()
 {
