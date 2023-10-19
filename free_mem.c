@@ -4,14 +4,14 @@
  * @tokens: the array of tokens to be freed
  * @num_tokens: a pointer to the number of tokens in the array
  */
-void free_mem(char **tokens, int *num_tokens)
+void free_mem(char **token, int *num_tokens)
 {
-	int i = 0;
+	int i;
 
-	while (i <= *num_tokens)
+	for (i = 0; i < *num_tokens; i++)
 	{
-		free(tokens[i]);
-		i++;
+		free(token[i]);
+		token[i] = NULL;
 	}
-	free(tokens);
+	free(token);
 }

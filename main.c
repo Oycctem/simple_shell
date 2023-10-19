@@ -22,7 +22,6 @@ int main(int argc, char *argv[])
 		num_char = getline(&buffer, &len, stdin);
 		if (num_char == -1)
 		{
-			free(buffer);
 			break;
 		}
 		token = strbrkdown(buffer, &num_tokens);

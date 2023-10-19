@@ -18,14 +18,12 @@ int executer(char **cmd, char *name, int *num_tokens, char *buffer)
 		perror(name);
 		free_mem(cmd, num_tokens);
 		free(whole_path);
-		free(buffer);
 		return (1);
 	}
 	pid = fork();
 	if (pid == -1)
 	{
 		perror("fork");
-		return (0);
 	}
 	else if (pid == 0)
 	{
@@ -34,7 +32,6 @@ int executer(char **cmd, char *name, int *num_tokens, char *buffer)
 			perror("execve");
 			free(buffer);
 			free_mem(cmd, num_tokens);
-			exit(1);
 		}
 	}
 	else
